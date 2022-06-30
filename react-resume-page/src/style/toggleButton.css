@@ -1,0 +1,39 @@
+.toggle-button {
+    appearance: none;
+    width: 40px;
+    height: 21px;
+    /* display: inline-block; */
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-text-color);
+    transition: background-color ease 0.2s;
+}
+
+.toggle-button:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    background: var(--primary-background-color);
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    white-space: nowrap;
+    transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.2s;
+    /* transition: all ease-in-out 0.2s; */
+}
+
+.toggle-button:checked {
+    background-color: var(--primary-text-color);
+}
+
+.toggle-button:checked:before {
+    left: 20px;
+    background: var(primary-highlight-color);
+}
